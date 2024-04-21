@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ipad</title>
+        <style>
+            * {
+                background-color: white;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: darkturquoise;
+            }
+            .pad {
+                border: 1px solid blue;
+                width: 500px;
+                height: 100%;
+                margin: 3px auto;
+                border-radius: 10px;
+                position: relative;
+            }
+            .mb {
+                width: 50px;
+                height: 50px;
+                border-radius: 25px;
+                margin: auto;
+                border: 1px solid blue;
+                position: absolute;
+                top: 100px;
+                left: 50%;
+                transform: translate(-50%, -10%);
+                text-align: center;
+            }
+            .app {
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+                display: inline-block;
+                text-align: center;
+                border: 1px solid blue;
+                margin: 10px;
+            }
+            .d {
+/*                position: absolute;*/
+                width: 500px;
+/*                margin: auto;*/
+                position: absolute;
+                top: 10px;
+                left: 50%;
+                transform:translate(-50%,0);
+            }
+            a {
+                text-decoration: none;
+                color: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="pad" id="pad">
+            
+        </div>
+        
+        <p class="mb" id="mb">
+            Menu
+        </p>
+        
+        <div class="d">
+            <p class="app">
+                <a href="https://www.baidu.com">百度</a>
+            </p>
+            <p class="app">
+                <a href="https://www.bilibili.com">Bilibili</a>
+            </p>
+            <p class="app">
+                <a href="https://map.baidu.com">地图</a>
+            </p>
+            <p class="app">
+                <a href="https://www.github.com">GITHUB</a>
+            </p>
+            <p class="app">
+                <a href="https://www.zcool.com.cn/">站酷</a>
+            </p>
+        </div>
+        
+        <script>
+            function update(){
+                var hei = window.innerHeight - 10;
+                var pad = document.getElementById("pad");
+                var meb = document.getElementById("mb");
+                pad.style.height = String(hei) + "px";
+                meb.style.top = String(hei - 50) + "px";
+            }
+            
+            setInterval(update, 100);
+        </script>
+    </body>
+</html>
