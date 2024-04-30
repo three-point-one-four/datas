@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+    <head>
+        <title>主页</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .top-left {
+                position: absolute;
+                background-color: royalblue;
+                width: 120%;
+                height: 1000px;
+                top: -50px;
+                left: 0;
+                animation: tl 2s;
+                animation-fill-mode: forwards;
+                z-index: 10000;
+            }
+            
+            @keyframes tl {
+                0% {
+                    left: 0px;
+                }
+                
+                100% {
+                    left: -2000px;
+                }
+            }
+            
+            .bottom {
+                margin: 0 auto;
+                overflow: hidden;
+                width: 100%;
+                position: relative;
+                background-color: rgba(255, 255, 255, .05);
+                animation: bottom-long 5s;
+                animation-fill-mode: forwards;
+            }
+            
+            body {
+                background-color: dodgerblue;
+            }
+            
+            h1 {
+                color: aliceblue;
+                font-family: Times, 宋体;
+                text-align: center;
+            }
+            
+            p {
+                color: aliceblue;
+                font-family: Times, 微软雅黑;
+            }
+            
+            @keyframes bottom-long {
+                0% {
+                    height: 100px;
+                }
+                
+                100% {
+                    height: 2000px;
+                }
+            }
+            
+            .abouts {
+                animation: about-go 5s infinite;
+                width: 1210px;
+            }
+            
+            .abouts:hover {
+                animation-play-state: paused;
+            }
+            
+            .about {
+                height: 500px;
+                width: 400px;
+                background-color: white;
+                opacity: .8;
+                border-radius: 20px;
+                display: inline-flex;
+                transition: .5s;
+            }
+            
+            .about:hover {
+                opacity: 1;
+                transition: .5s;
+            }
+            
+            .about:active {
+                opacity: 1;
+                transition: .5s;
+                background-color: floralwhite;
+            }
+            
+            .about h1 {
+                color: darkblue;
+                text-align: center;
+            }
+            
+            .about p {
+                color: darkblue;
+                text-align: left;
+            }
+            
+            @keyframes about-go {
+                0% {
+                    margin-left: 0;
+                }
+                
+                50% {
+                    margin-left: -210px;
+                }
+                
+                100% {
+                    margin-left: 0;
+                }
+            }
+            
+            .title {
+                font-size: 40pt;
+                text-align: center;
+                height: 73px;
+            }
+            
+            .mps {
+                width: 100%;
+                margin: 0 auto;
+            }
+            
+            .main-page {
+                width: 50px;
+                text-align: left;
+                overflow: hidden;
+                margin: 0 auto;
+                height: 50px;
+                background-color: skyblue;
+                border-radius: 30px;
+                transition-delay: 60000s;
+                position: fixed;
+                top: 0;
+                right: 0px;
+                z-index: 0;
+            }
+            
+            .main-page h1 {
+                font-size: 50px;
+                color: black;
+            }
+            
+            .main-page p {
+                color: black;
+            }
+            
+            .main-page:active {
+                background-color: white;
+                transition-delay: 0s;
+                top: 0px;
+                width: 100%;
+                height: 1440px;
+                border-radius: 0;
+                z-index: 1000000;
+            }
+            
+            .main-page2 {
+                width: 50px;
+                text-align: left;
+                overflow: hidden;
+                margin: 0 auto;
+                height: 50px;
+                background-color: skyblue;
+                border-radius: 30px;
+                transition-delay: 60000s;
+                position: fixed;
+                top: 50px;
+                right: 0px;
+                z-index: 0;
+            }
+            
+            .main-page2 h1 {
+                font-size: 50px;
+                color: black;
+            }
+            
+            .main-page2 p {
+                color: black;
+            }
+            
+            .main-page2:active {
+                background-color: white;
+                transition-delay: 0s;
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                height: 1440px;
+                border-radius: 0;
+                z-index: 1000000;
+            }
+            
+            .main-page3 {
+                width: 50px;
+                text-align: left;
+                overflow: hidden;
+                margin: 0 auto;
+                height: 50px;
+                background-color: skyblue;
+                border-radius: 30px;
+                transition-delay: 60000s;
+                position: fixed;
+                top: 100px;
+                right: 0px;
+                z-index: 0;
+            }
+            
+            .main-page3 h1 {
+                font-size: 50px;
+                color: black;
+            }
+            
+            .main-page3 p {
+                color: black;
+            }
+            
+            .main-page3:active {
+                background-color: white;
+                transition-delay: 0s;
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                height: 1440px;
+                border-radius: 0;
+                z-index: 1000000;
+            }
+            
+            .main-page-text {
+                text-align: left;
+                width: 800px;
+                margin: auto;
+            }
+            
+            .som {
+                height: 27px;
+            }
+            
+            iframe {
+                display: inline-block;
+            }
+            
+            a {
+                text-decoration: none;
+                color: white;
+                font-family: Times, 宋体;
+            }
+            
+            a[href^='mailto']::before {
+                content: '📧 ';
+            }
+
+            a[href^='tel']::before {
+                content: '📞 ';
+            }
+            
+            address {
+                font: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bottom">
+            <div class="top-left"></div>
+            <h1 class="title">Hi! 欢迎来到气愤、幸运、徐Bread的主页</h1>
+            <p class="som">这是我们：</p>
+            <div class="abouts">
+                <div class="about">
+                    <h1 class="peo">气<br>愤</h1>
+                    <p>网名全名：气愤的黄鳝削梨子<br>
+                    网易我的世界：气愤黄鳝削梨子4<br>
+                    年龄：你猜</p>
+                </div>
+                <div class="about">
+                    <h1 class="peo">幸<br>运</h1>
+                    <p>网名全名：Lucky-fire-chai<br>
+                    网易我的世界：幸运火柴人削梨子<br>
+                    年龄：你猜</p>
+                </div>
+                <div class="about">
+                    <h1 class="peo">徐<br>B<br>r<br>e<br>a<br>d</h1>
+                    <p>网名全名：Xu-bread<br>
+                    网易我的世界：Chara削梨子、小徐削梨子、寻找温迪的魈<br>
+                    年龄：你猜</p>
+                </div>
+            </div>
+            <p class="som">我们的主页在右上角，点一下就可以进入。</p>
+            <div class="mps">
+                <div class="main-page">
+                    <h1>气愤的黄鳝削梨子</h1>
+                    <div class="main-page-text">
+                        <p><strong>这个网站的作者。</strong><br>
+                        <strong>擅长</strong>：SCRATCH、PYTHON、HTML(一点点)<br>
+                        <strong>精神状态</strong>：不太好，颠</p>
+                        <iframe src="//player.bilibili.com/player.html?aid=112303228915456&bvid=BV1XTJ5euEZ6&cid=500001513899125&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                        <iframe src="//player.bilibili.com/player.html?aid=112307275042048&bvid=BV1yGJUemEN8&cid=500001514621464&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                        <p>↑作品</p>
+                    </div>
+                </div>
+                <div class="main-page2">
+                    <h1>幸运火柴人削梨子</h1>
+                    <div class="main-page-text">
+                        <p><strong>MC劳大</strong><br>
+                        <strong>擅长</strong>：MC<br>
+                        <strong>精神状态</strong>：特别颠</p>
+                    </div>
+                </div>
+                <div class="main-page3">
+                    <h1>徐BREAD</h1>
+                    <div class="main-page-text">
+                        <p><strong>傻子一枚</strong><br>
+                        <strong>擅长</strong>：MC、笑<br>
+                        <strong>精神状态</strong>：正常</p>
+                    </div>
+                </div>
+            </div>
+            <p>我们的主页：<br>
+            <a href="https://space.bilibili.com/3546574829390000?spm_id_from=333.1007.0.0">气愤的主页 网址：<i>https://space.bilibili.com/3546574829390000?spm_id_from=333.1007.0.0</i></a><br>
+            <a href="https://space.bilibili.com/3546566927321214?spm_id_from=333.999.0.0">幸运的主页 网址：<i>https://space.bilibili.com/3546566927321214?spm_id_from=333.999.0.0</i></a><br>
+            <a href="https://space.bilibili.com/1550469415?spm_id_from=333.999.0.0">徐<i>Bread</i>的主页 网址：<i>https://space.bilibili.com/1550469415?spm_id_from=333.999.0.0</i></a>
+            </p>
+            
+            <address>
+                <a href="mailto:minec219@outlook.com">邮箱：minec219@outlook.com</a><br>
+                <a href="tel:+8615058231796">电话：(+86) 15058231796</a>
+            </address>
+        </div>
+    </body>
+</html>
