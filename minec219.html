@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
     <head>
+        <meta name="referrer" content="no-referrer" />
+        <!--加载网络图片-->
         <title>主页</title>
         <style>
             * {
@@ -17,7 +19,7 @@
                 left: 0;
                 animation: tl 2s;
                 animation-fill-mode: forwards;
-                z-index: 10000;
+                z-index: 10000000;
             }
             
             @keyframes tl {
@@ -41,18 +43,19 @@
             }
             
             body {
-                background-color: dodgerblue;
+                background-color: white;
             }
             
             h1 {
-                color: aliceblue;
+                color: midnightblue;
                 font-family: Times, 宋体;
                 text-align: center;
             }
             
             p {
-                color: aliceblue;
+                color: midnightblue;
                 font-family: Times, 微软雅黑;
+                font-weight: 550;
             }
             
             @keyframes bottom-long {
@@ -77,7 +80,7 @@
             .about {
                 height: 500px;
                 width: 400px;
-                background-color: white;
+                background-color: rgba(230, 230, 230, .75);
                 opacity: .8;
                 border-radius: 20px;
                 display: inline-flex;
@@ -92,7 +95,8 @@
             .about:active {
                 opacity: 1;
                 transition: .5s;
-                background-color: floralwhite;
+                background-color: rgba(240, 240, 240, .75);
+                color: cornflowerblue;
             }
             
             .about h1 {
@@ -123,6 +127,7 @@
                 font-size: 40pt;
                 text-align: center;
                 height: 73px;
+                font-weight: 1000;
             }
             
             .mps {
@@ -136,7 +141,7 @@
                 overflow: hidden;
                 margin: 0 auto;
                 height: 50px;
-                background-color: skyblue;
+                background-color: rgba(230, 230, 230, 1);
                 border-radius: 30px;
                 transition-delay: 60000s;
                 position: fixed;
@@ -147,97 +152,11 @@
             
             .main-page h1 {
                 font-size: 50px;
-                color: black;
+                color: indigo;
             }
             
             .main-page p {
-                color: black;
-            }
-            
-            .main-page:active {
-                background-color: white;
-                transition-delay: 0s;
-                top: 0px;
-                width: 100%;
-                height: 1440px;
-                border-radius: 0;
-                z-index: 1000000;
-            }
-            
-            .main-page2 {
-                width: 50px;
-                text-align: left;
-                overflow: hidden;
-                margin: 0 auto;
-                height: 50px;
-                background-color: skyblue;
-                border-radius: 30px;
-                transition-delay: 60000s;
-                position: fixed;
-                top: 50px;
-                right: 0px;
-                z-index: 0;
-            }
-            
-            .main-page2 h1 {
-                font-size: 50px;
-                color: black;
-            }
-            
-            .main-page2 p {
-                color: black;
-            }
-            
-            .main-page2:active {
-                background-color: white;
-                transition-delay: 0s;
-                position: fixed;
-                top: 0px;
-                width: 100%;
-                height: 1440px;
-                border-radius: 0;
-                z-index: 1000000;
-            }
-            
-            .main-page3 {
-                width: 50px;
-                text-align: left;
-                overflow: hidden;
-                margin: 0 auto;
-                height: 50px;
-                background-color: skyblue;
-                border-radius: 30px;
-                transition-delay: 60000s;
-                position: fixed;
-                top: 100px;
-                right: 0px;
-                z-index: 0;
-            }
-            
-            .main-page3 h1 {
-                font-size: 50px;
-                color: black;
-            }
-            
-            .main-page3 p {
-                color: black;
-            }
-            
-            .main-page3:active {
-                background-color: white;
-                transition-delay: 0s;
-                position: fixed;
-                top: 0px;
-                width: 100%;
-                height: 1440px;
-                border-radius: 0;
-                z-index: 1000000;
-            }
-            
-            .main-page-text {
-                text-align: left;
-                width: 800px;
-                margin: auto;
+                color: indigo;
             }
             
             .som {
@@ -250,21 +169,22 @@
             
             a {
                 text-decoration: none;
-                color: white;
+                color: midnightblue;
                 font-family: Times, 宋体;
             }
             
             a[href^='mailto']::before {
-                content: '📧 ';
+                content: '* ';
             }
 
             a[href^='tel']::before {
-                content: '📞 ';
+                content: '* ';
             }
             
             address {
                 font: italic;
             }
+            
         </style>
     </head>
     <body>
@@ -294,44 +214,87 @@
             </div>
             <p class="som">我们的主页在右上角，点一下就可以进入。</p>
             <div class="mps">
-                <div class="main-page">
+                <p style="position: fixed; top: 0px; right: 0px; z-index: 1111111; height: 37px; overflow: hidden; font-family: Times, 宋体; font-size: 25px; opacity: .75; font-weight: 1000;"><b>主页<i>Homepage</i></b></p>
+                <div class="main-page" style="top: 25px;" onClick="click1(event)" id="mp1">
                     <h1>气愤的黄鳝削梨子</h1>
                     <div class="main-page-text">
-                        <p><strong>这个网站的作者。</strong><br>
-                        <strong>擅长</strong>：SCRATCH、PYTHON、HTML(一点点)<br>
-                        <strong>精神状态</strong>：不太好，颠</p>
+                        <p><strong>座右铭：只要HAPPY就够了！</strong><br>
+                        <strong>擅长</strong>：SCRATCH,PYTHON,HTML(一点点)<br>
+                        <strong>精神状态</strong>：疯癫<br>
+                        <strong>简介</strong>：六年级IKUN，语文超差，喜欢科学。</p>
+                        <img src="https://i2.hdslb.com/bfs/face/3f94a46f8823436bddc9825787a0715819968ea4.jpg@240w_240h_1c_1s_!web-avatar-space-header.avif" alt="错误的图片：气愤的黄鳝削梨子的头像">
                         <iframe src="//player.bilibili.com/player.html?aid=112303228915456&bvid=BV1XTJ5euEZ6&cid=500001513899125&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
                         <iframe src="//player.bilibili.com/player.html?aid=112307275042048&bvid=BV1yGJUemEN8&cid=500001514621464&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-                        <p>↑作品</p>
                     </div>
                 </div>
-                <div class="main-page2">
+                <div class="main-page" style="top: 75px;" onClick="click2(event)" id="mp2">
                     <h1>幸运火柴人削梨子</h1>
                     <div class="main-page-text">
-                        <p><strong>MC劳大</strong><br>
-                        <strong>擅长</strong>：MC<br>
-                        <strong>精神状态</strong>：特别颠</p>
+                        <p>等待用户“幸运火柴人削梨子”填写</p>
                     </div>
                 </div>
-                <div class="main-page3">
+                <div class="main-page" style="top: 125px;" onClick="click3(event)" id="mp3">
                     <h1>徐BREAD</h1>
                     <div class="main-page-text">
-                        <p><strong>傻子一枚</strong><br>
-                        <strong>擅长</strong>：MC、笑<br>
-                        <strong>精神状态</strong>：正常</p>
+                        <p>等待用户“幸运火柴人削梨子”填写</p>
                     </div>
                 </div>
             </div>
             <p>我们的主页：<br>
-            <a href="https://space.bilibili.com/3546574829390000?spm_id_from=333.1007.0.0">气愤的主页 网址：<i>https://space.bilibili.com/3546574829390000?spm_id_from=333.1007.0.0</i></a><br>
-            <a href="https://space.bilibili.com/3546566927321214?spm_id_from=333.999.0.0">幸运的主页 网址：<i>https://space.bilibili.com/3546566927321214?spm_id_from=333.999.0.0</i></a><br>
-            <a href="https://space.bilibili.com/1550469415?spm_id_from=333.999.0.0">徐<i>Bread</i>的主页 网址：<i>https://space.bilibili.com/1550469415?spm_id_from=333.999.0.0</i></a>
+                <a href="https://space.bilibili.com/3546574829390000?spm_id_from=333.1007.0.0">气愤的主页 网址：<i>https://space.bilibili.com/3546574829390000?spm_id_from=333.1007.0.0</i></a><br>
+                <a href="https://space.bilibili.com/3546566927321214?spm_id_from=333.999.0.0">幸运的主页 网址：<i>https://space.bilibili.com/3546566927321214?spm_id_from=333.999.0.0</i></a><br>
+                <a href="https://space.bilibili.com/1550469415?spm_id_from=333.999.0.0">徐<i>Bread</i>的主页 网址：<i>https://space.bilibili.com/1550469415?spm_id_from=333.999.0.0</i></a>
             </p>
             
             <address>
                 <a href="mailto:minec219@outlook.com">邮箱：minec219@outlook.com</a><br>
-                <a href="tel:+8615058231796">电话：(+86) 15058231796</a>
+                <a href="tel:+8615058231796">电话：(+86) 15058231796</a><br>
             </address>
+            <p class="som">欢迎提出建议！<strong><i><sup>(不喜勿喷)</sup></i></strong></p>
+            <script>
+                /*.main-page:active {
+                background-color: white;
+                transition-delay: 0s;
+                top: 0px;
+                width: 100%;
+                height: 1440px;
+                border-radius: 0;
+                z-index: 1000000;
+                }*/
+                var mp1 = document.getElementById("mp1");
+                var mp2 = document.getElementById("mp2");
+                var mp3 = document.getElementById("mp3");
+                
+                function click1(e){
+                    mp1.style.backgroundColor = "white";
+                    mp1.style.transitionDelay = "0s";
+                    mp1.style.top = "0";
+                    mp1.style.width = "100%";
+                    mp1.style.height = "1440px";
+                    mp1.style.borderRadius = "0";
+                    mp1.style.zIndex = "1000000";
+                }
+                
+                function click2(e){
+                    mp2.style.backgroundColor = "white";
+                    mp2.style.transitionDelay = "0s";
+                    mp2.style.top = "0";
+                    mp2.style.width = "100%";
+                    mp2.style.height = "1440px";
+                    mp2.style.borderRadius = "0";
+                    mp2.style.zIndex = "1000000";
+                }
+                
+                function click3(e){
+                    mp3.style.backgroundColor = "white";
+                    mp3.style.transitionDelay = "0s";
+                    mp3.style.top = "0";
+                    mp3.style.width = "100%";
+                    mp3.style.height = "1440px";
+                    mp3.style.borderRadius = "0";
+                    mp3.style.zIndex = "1000000";
+                }
+            </script>
         </div>
     </body>
 </html>
